@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Management System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div> class="container">
+<div> class="row">
+<div> class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+<h1 class"text center">Create New Student</h1> 
+<div> class="card body">
+<form> th:action="@{/students}" th:object="$(students)"method="POST">
+<div> class="from-group">
+<label>>Student First Name</label>
+<inputtype="text"
+name="firstName"
+th:field="*{firstName}"
+class="form-control"
+placeholder="Enter student First Name"
+</div>
+
+<div> class="from-group">
+<label>>Student Last Name</label>
+<inputtype="text"
+name="lastName"
+th:field="*{lastName}"
+class="form-control"
+placeholder="Enter student Last Name"
+</div>
+
+<div> class="from-group">
+<label>>Student Email</label>
+<inputtype="text"
+name="email"
+th:field="*{email}""
+class="form-control"
+placeholder="Enter student Email"
+</div>
+<div> class="footer-body">
+<button> type="Submit" class="btn btn-primary">
+Sumit
+</button>
+</div>
+
+
+</form>
+</div>
+</div>
+</div>
+</div>
+	</body>
+	</html>
